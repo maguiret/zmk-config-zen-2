@@ -8,20 +8,21 @@
     //zmk,matrix_transform = &five_column_transform;
   };
 };
-
 / {
-                macros {
-                   Dash: Dash {
-                        label = "Dash";
-                        compatible = "zmk,behavior-macro";
-                       #binding-cells = <4>;
-                        bindings
-                            = <&macro_press &kp LGUI>
-                            , <&macro_tap &kp TAB>
-                            , <&macro_release &kp LGUI>
-                            ;
-                    };
-                };
+    macros {
+        Dash: Dash {
+            label = "Dashboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
+};
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
