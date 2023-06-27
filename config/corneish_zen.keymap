@@ -71,16 +71,16 @@
                         >;
                 };
                 macros {
-//                   Dash: Dash {
-//                        label = "Dash";
-//                        compatible = "zmk,behavior-macro";
+                   Dash: Dash {
+                        label = "Dash";
+                        compatible = "zmk,behavior-macro";
 //                       #binding-cells = <0>;
 //                        bindings
 //                            = <&macro_press &kp LGUI>
 //                            , <&macro_tap &kp TAB>
 //                            , <&macro_release &kp LGUI>
 //                            ;
-//                    };
+                    };
                 };
 
         };
