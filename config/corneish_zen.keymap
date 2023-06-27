@@ -10,6 +10,18 @@
 };
 
 / {
+                macros {
+                   Dash: Dash {
+                        label = "Dash";
+                        compatible = "zmk,behavior-macro";
+                       #binding-cells = <4>;
+                        bindings
+                            = <&macro_press &kp LGUI>
+                            , <&macro_tap &kp TAB>
+                            , <&macro_release &kp LGUI>
+                            ;
+                    };
+                };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -70,18 +82,5 @@
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
-//                macros {
-//                   Dash: Dash {
-//                        label = "Dash";
-//                        compatible = "zmk,behavior-macro";
-//                       #binding-cells = <0>;
-//                        bindings
-//                            = <&macro_press &kp LGUI>
-//                            , <&macro_tap &kp TAB>
-//                            , <&macro_release &kp LGUI>
-//                            ;
-//                    };
-//                };
-
         };
 };
