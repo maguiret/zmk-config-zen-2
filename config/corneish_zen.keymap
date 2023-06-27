@@ -70,7 +70,7 @@
                           	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
-//                macros {
+                macros {
 //                   Dash: Dash {
 //                        label = "Dash";
 //                        compatible = "zmk,behavior-macro";
@@ -81,7 +81,7 @@
 //                            , <&macro_release &kp LGUI>
 //                            ;
 //                    };
-//                };
+                };
 
         };
 };
