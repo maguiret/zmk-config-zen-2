@@ -67,9 +67,9 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-// |      |     |     |     |     |     |   | LFT |  4  |  5  |  6  |     |     |
-// | SHFT |     |     |     |     |     |   |     |  1  |  2  |  3  |     |     |
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  -  |  7  |  8  |  9  |  0  |     |
+// |      |     |     |     |     |     |   |  +  |  4  |  5  |  6  |     |     |
+// | SHFT |     |     |     |     |     |   |  *  |  1  |  2  |  3  |     |     |
 //                    | GUI |     | SPC |   |  0  |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp MINUS &kp N7   &kp N8 &kp N9    &kp N0 &trans
@@ -82,14 +82,14 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |  ?  |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// |  TAB |  &  |  @  |  _  |  $  |  %  |   |  -  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |  ?  |     |  [  |  (  |     |   |  -  |  ?  |  !  |  ]  |  \  |  `   |
+// | SHFT |     |     |  ]  |  )  |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &kp QMARK &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans    &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
+   &kp  TAB  &kp AMPS  &kp AT &kp UNDER &kp DLLR &kp PRCNT   &kp MINUS &kp AMPS  &kp STAR &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &kp QMARK &trans &kp LBKT &kp LPAR &kp LBRC    &kp PLUS &kp QMARK &kp EXCL &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans    &trans &kp RBKT &kp RPAR &kp RBRC    &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
