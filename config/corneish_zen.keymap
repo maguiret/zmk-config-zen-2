@@ -66,63 +66,6 @@
                         label = "QWERTY";
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  TAB |
-// |  ALT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SSHOT|
-//                 |1DEL| 2 |SHFTRET|      |3SPC | BKSP | GUI  |
-                        bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp TAB
-   &kp LALT  &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &Screen
-                  &lt 1 DEL  &lt 2 RET &mt LSHIFT RET     &lt 3 SPACE &kp BSPC &mt LGUI DEL
-                        >;
-                };
-                lower_layer {
-                        label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  -  |  7  |  8  |  9  |  0  |     |
-// |      |     |     |     |     |     |   |  +  |  4  |  5  |  6  |     |     |
-// | SHFT |     |     |     |     |     |   |  *  |  1  |  2  |  3  |     | GAME|
-//                    | GUI |     | SPC |   |  0  | BKSP| ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp MINUS &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans     &trans       &trans       &trans       &trans       &trans         &kp PLUS  &kp N4   &kp N5 &kp N6    &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &kp STAR  &kp N1   &kp N2 &kp N3    &trans &tog 4
-                          	        &kp LGUI     &trans       &kp SPACE      &kp N0   &kp BSPC   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  &  |  @  |  #  |  $  |  %  |   |  -  |  &  |  *  |     |     | BKSP |
-// | CTRL |     |  _  |  [  |  (  |  {  |   |  +  |  ?  |  !  |     |  \  |  `   |
-// | SHFT |     |     |  ]  |  )  |  }  |   |  *  |     |     |     | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp AMPS  &kp AT    &kp HASH &kp DLLR &kp PRCNT  &kp MINUS &kp AMPS  &kp STAR &trans &trans   &kp BSPC
-   &kp LCTRL &trans    &kp UNDER &kp LBKT  &kp LPAR &kp LBRC   &kp PLUS  &kp QMARK &kp EXCL &trans &kp BSLH &kp GRAVE
-   &kp LSHFT &trans    &trans    &kp RBKT  &kp RPAR &kp RBRC   &kp STAR  &trans    &trans   &trans &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
-                navigate_layer {
-                        label = "NAVIGATE";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |LDash|
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |Dash |
-// | SHFT |     |     |     |     |     |   | PREV| PLAY| NXT |     |     |RDash|
-//                    | GUI |     | SPC |   |Dash|LDesk|RDesk|
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7     &kp N8      &kp N9    &kp N0 &LDesk
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN   &kp UP      &kp RIGHT &trans &Dash
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &kp C_PREV   &kp C_PP   &kp C_NEXT  &trans    &trans &RDesk
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-                gaming_layer {
-                        label = "GAME";
-// -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  TAB |
 // |  TAB |  A  |  S  |  D  |  F  |  H  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | DFLT |
 //                    |  I  |SPACE|LCTRL|   | SPC |      | GUI|
@@ -133,5 +76,6 @@
                   &kp I &kp SPACE &kp LCTRL    &lt 3 SPACE &trans &kp LGUI
                         >;
                 };
+
         };
 };
