@@ -81,12 +81,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |    |  -  |  7  |  8  |  9  |  *  |     |
 // |      |     |  {  |  [  |  (  |  $  |    |  +  |  4  |  5  |  6  |  /  |     |
-// | SHFT |     |  }  |  ]  |  )  |  %  |    |     |  1  |  2  |  3  |     | GAME|
+// | SHFT |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |     | GAME|
 //                | GUI | DEL |SHFT|          | 0  | BKSP| ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp MINUS &kp N7   &kp N8 &kp N9    &kp STAR    &trans
    &trans     &trans       &kp LBRC     &kp LBKT     &kp LPAR     &kp DLLR       &kp PLUS  &kp N4   &kp N5 &kp N6    &kp FSLH    &trans
-   &kp LSHFT  &trans       &kp RBRC     &kp RBKT     &kp RPAR     &kp PRCNT      &trans    &kp N1   &kp N2 &kp N3    &trans      &tog 4
+   &kp LSHFT  &trans       &kp RBRC     &kp RBKT     &kp RPAR     &kp PRCNT      &kp EQUAL &kp N1   &kp N2 &kp N3    &trans      &tog 4
                    &kp LGUI     &kp DEL       &kp LSHIFT            &kp N0   &kp BSPC   &kp RALT
                         >;
                 };
