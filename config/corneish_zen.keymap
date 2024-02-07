@@ -94,15 +94,15 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  TAB |     |     |     |     |     |   |     |     |  ^  |     |     | BKSP |
-// | CTRL |     |     |     |     |     |   |     |  ?  |  !  |  &  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  @  |  &  |     | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  TAB |     |     |     |     |     |   |     |  ^  |  &  |     |     | BKSP |
+// | CTRL |     |     |     |     |     |   |     |  ?  |  !  |  \  |  `  |      |
+// | SHFT |     |     |     |     |     |   |  _  |  @  |     | "|" |  ~  |      |
+//                  | GUI |     | SPC |        | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &trans    &trans &trans    &trans &trans   &trans      &trans    &kp CARET &trans   &trans   &kp BSPC
-   &kp LCTRL &trans    &trans &trans    &trans &trans   &trans      &kp QMARK &kp EXCL  &kp AMPS &kp BSLH &kp GRAVE
-   &kp LSHFT &trans    &trans &trans    &trans &trans   &kp UNDER   &kp AT    &kp AMPS  &trans   &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp  TAB  &trans    &trans &trans    &trans &trans     &trans      &kp CARET &kp AMPS  &trans    &trans     &kp BSPC
+   &kp LCTRL &trans    &trans &trans    &trans &trans     &trans      &kp QMARK &kp EXCL  &kp BSLH  &kp GRAVE  &trans
+   &kp LSHFT &trans    &trans &trans    &trans &trans     &kp UNDER   &kp AT    &trans    &kp PIPE  &kp TILDE  &trans
+           	     &kp LGUI    &trans   &kp SPACE             &kp RET   &trans    &kp RALT
                         >;
                 };
                 navigate_layer {
