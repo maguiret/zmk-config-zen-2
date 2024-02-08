@@ -68,7 +68,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  ESC |
 // |      |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SSHOT|
-//                    | GUI | DEL | SHFT |   | SPC | BKSP | ENT|
+//                | GUI | DEL | SHFT |        | SPC | BKSP | ENT|
                         bindings = <
    &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U    &kp I     &kp O     &kp P      &kp ESC
    &trans      &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J    &kp K     &kp L     &kp SEMI   &kp SQT
@@ -82,7 +82,7 @@
 // |  TAB |  1  |  2  |  3  |  4  |  5  |    |  +  |  7  |  8  |  9  |  *  | ESC |
 // |      |     |  {  |  [  |  (  |  $  |    |  -  |  4  |  5  |  6  |  /  |     |
 // | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |  #  |     |
-//                | GUI | DEL |SHFT|          | 0  | BKSP| ALT |
+//                | GUI | DEL |SHFT|            | 0  | BKSP| ALT |
                         bindings = <
    &kp TAB    &kp N1    &kp N2       &kp N3       &kp N4      &kp N5           &kp PLUS   &kp N7   &kp N8   &kp N9    &kp STAR    &kp ESC
    &trans     &trans    &kp LBRC     &kp LBKT     &kp LPAR    &kp DLLR         &kp MINUS  &kp N4   &kp N5   &kp N6    &kp FSLH    &trans
@@ -97,12 +97,12 @@
 // |  TAB |     |     |     |     |     |   |     |  ^  |  &  |  ~  |     |  ESC |
 // |      |     |     |     |     |     |   |     |  ?  |  !  |  `  |     |      |
 // | CTRL |     |     |     |     |     |   |  _  |  @  | "|" |     |  \  |      |
-//                  | GUI |    | SPC |        | ENT |     | ALT |
+//                  | GUI |    | SHFT |          | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &trans    &trans &trans    &trans &trans         &trans      &kp CARET &kp AMPS  &kp TILDE &trans    &kp ESC
    &trans    &trans    &trans &trans    &trans &trans         &trans      &kp QMARK &kp EXCL  &kp GRAVE &trans    &trans
    &kp LCTRL &trans    &trans &trans    &trans &trans         &kp UNDER   &kp AT    &kp PIPE  &trans    &kp BSLH  &trans
-           	     &kp LGUI    &trans   &kp SPACE                   &kp RET   &trans    &kp RALT
+           	     &kp LGUI    &trans   &kp LSHIFT                   &kp RET   &trans    &kp RALT
                         >;
                 };
                 navigate_layer {
@@ -111,12 +111,12 @@
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |LDash|
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |Dash |
 // | SHFT |     |     |     |     |     |   | PREV| PLAY| NXT |     |     |RDash|
-//                    | GUI |     | SPC |   |Dash|LDesk|RDesk|
+//                  | GUI |     | SHFT |        | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6   &kp N7     &kp N8      &kp N9      &kp N0 &LDesk
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp LEFT &kp DOWN   &kp UP      &kp RIGHT   &trans &Dash
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans             &trans   &kp C_PREV &kp C_PP    &kp C_NEXT  &trans &RDesk
-                          	        &kp LGUI     &trans       &kp SPACE                  &kp RET  &trans   &kp RALT
+                          	     &kp LGUI     &trans       &kp LSHIFT                    &kp RET  &trans   &kp RALT
                         >;
                 };
         };
