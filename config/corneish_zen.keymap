@@ -95,12 +95,12 @@
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // | ESC  |     |     |     |     |     |   |     |  ^  |  &  |  ~  |     |      |
-// | TAB  |     |     |     |     |     |   |     |  ?  |  !  |  `  |     |      |
+// | TAB  |     |     |     |     |     |   |     |  !  |  ?  |  `  |     |      |
 // | CTRL |     |     |     |     |     |   |  _  |  @  | "|" |     |  \  |      |
 //                  | GUI |    | SHFT |          | ENT |     | ALT |
                         bindings = <
    &kp ESC   &trans    &trans &trans    &trans &trans         &trans      &kp CARET &kp AMPS  &kp TILDE &trans    &trans
-   &kp TAB   &trans    &trans &trans    &trans &trans         &trans      &kp QMARK &kp EXCL  &kp GRAVE &trans    &trans
+   &kp TAB   &trans    &trans &trans    &trans &trans         &trans      &kp EXCL  &kp QMARK &kp GRAVE &trans    &trans
    &kp LCTRL &trans    &trans &trans    &trans &trans         &kp UNDER   &kp AT    &kp PIPE  &trans    &kp BSLH  &trans
            	     &kp LGUI    &trans   &kp LSHIFT                   &kp RET   &trans    &kp RALT
                         >;
