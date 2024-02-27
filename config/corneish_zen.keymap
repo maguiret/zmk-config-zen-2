@@ -79,14 +79,14 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// | ESC  |  1  |  2  |  3  |  4  |  5  |    |  +  |  7  |  8  |  9  |  *  |     |
+// | ESC  |  1  |  2  |  3  |  4  |  #  |    |  +  |  7  |  8  |  9  |  *  |     |
 // | TAB  |     |  {  |  [  |  (  |  $  |    |  -  |  4  |  5  |  6  |  /  |     |
-// | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |  #  |     |
+// | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |     |     |
 //                | GUI | DEL |SHFT|            | 0  | BKSP| ALT |
                         bindings = <
-   &kp ESC    &kp N1    &kp N2       &kp N3       &kp N4      &kp N5           &kp PLUS   &kp N7   &kp N8   &kp N9    &kp STAR    &trans
+   &kp ESC    &kp N1    &kp N2       &kp N3       &kp N4      &kp HASH         &kp PLUS   &kp N7   &kp N8   &kp N9    &kp STAR    &trans
    &kp TAB    &trans    &kp LBRC     &kp LBKT     &kp LPAR    &kp DLLR         &kp MINUS  &kp N4   &kp N5   &kp N6    &kp FSLH    &trans
-   &kp LCTRL  &trans    &kp RBRC     &kp RBKT     &kp RPAR    &kp PRCNT        &kp EQUAL  &kp N1   &kp N2   &kp N3    &kp HASH    &trans
+   &kp LCTRL  &trans    &kp RBRC     &kp RBKT     &kp RPAR    &kp PRCNT        &kp EQUAL  &kp N1   &kp N2   &kp N3    &trans      &trans
                    &kp LGUI     &kp DEL       &kp LSHIFT                                &kp N0   &kp BSPC   &kp RALT
                         >;
                 };
@@ -95,13 +95,13 @@
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // | ESC  |     |     |     |     |     |   |     |  ^  |  &  |  ~  |     |      |
-// | TAB  |     |     |     |     |     |   |     |  !  |  ?  |  `  |     |      |
-// | CTRL |     |     |     |     |     |   |  _  |  @  | "|" |     |  \  |      |
+// | TAB  |     |     |     |     |     |   |     |  !  |  ?  |  `  |  \  |      |
+// | CTRL |     |     |     |     |     |   |  _  |  @  | "|" |     |     |      |
 //                  | GUI |    | SHFT |          | ENT |     | ALT |
                         bindings = <
    &kp ESC   &trans    &trans &trans    &trans &trans         &trans      &kp CARET &kp AMPS  &kp TILDE &trans    &trans
-   &kp TAB   &trans    &trans &trans    &trans &trans         &trans      &kp EXCL  &kp QMARK &kp GRAVE &trans    &trans
-   &kp LCTRL &trans    &trans &trans    &trans &trans         &kp UNDER   &kp AT    &kp PIPE  &trans    &kp BSLH  &trans
+   &kp TAB   &trans    &trans &trans    &trans &trans         &trans      &kp EXCL  &kp QMARK &kp GRAVE &kp BSLH  &trans
+   &kp LCTRL &trans    &trans &trans    &trans &trans         &kp UNDER   &kp AT    &kp PIPE  &trans    &trans    &trans
            	     &kp LGUI    &trans   &kp LSHIFT                   &kp RET   &trans    &kp RALT
                         >;
                 };
