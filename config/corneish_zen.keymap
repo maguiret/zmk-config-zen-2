@@ -1,137 +1,170 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-    //zmk,matrix_transform = &five_column_transform;
-  };
+    chosen {
+        zmk,matrix_transform = &default_transform;
+
+        //zmk,matrix_transform = &five_column_transform;
+    };
 };
+
 / {
     macros {
         Dash: Dash {
             label = "Dashboard";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LGUI>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LGUI>;
         };
+
         LDesk: LDesk {
             label = "Left Desk";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp LEFT_ARROW>
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
+
         RDesk: RDesk {
             label = "Right Desk";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp RIGHT_ARROW>
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
+
         Screen: Screen {
             label = "Screenshot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
     };
 };
+
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-                        label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SSHOT|
-//                | GUI | DEL | SHFT |        | SPC | BKSP | ENT|
-                        bindings = <
-   &kp ESC     &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U    &kp I     &kp O     &kp P      &trans
-   &kp TAB     &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J    &kp K     &kp L     &kp SEMI   &kp SQT
-   &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M    &kp COMMA &kp DOT   &kp FSLH   &Screen
-      &lt 1 LGUI  &lt 2 DEL &kp LSHFT                         &lt 3 SPACE &kp BSPC &kp RET
-                        >;
-                };
-                lower_layer {
-                        label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// | ESC  |  1  |  2  |  3  |  4  |  #  |    |  +  |  7  |  8  |  9  |  *  |     |
-// | TAB  |     |  {  |  [  |  (  |  $  |    |  -  |  4  |  5  |  6  |  /  |     |
-// | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |     |     |
-//                | GUI | DEL |SHFT|            | 0  | BKSP| ALT |
-                        bindings = <
-   &kp ESC    &kp N1    &kp N2       &kp N3       &kp N4      &kp HASH         &kp PLUS   &kp N7   &kp N8   &kp N9    &kp STAR    &trans
-   &kp TAB    &trans    &kp LBRC     &kp LBKT     &kp LPAR    &kp DLLR         &kp MINUS  &kp N4   &kp N5   &kp N6    &kp FSLH    &trans
-   &kp LCTRL  &trans    &kp RBRC     &kp RBKT     &kp RPAR    &kp PRCNT        &kp EQUAL  &kp N1   &kp N2   &kp N3    &trans      &trans
-                   &kp LGUI     &kp DEL       &kp LSHIFT                                &kp N0   &kp BSPC   &kp RALT
-                        >;
-                };
+        default_layer {
+            label = "QWERTY";
 
-                raise_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// | ESC  |     |     |     |     |     |   |     |  ^  |  &  |  ~  |     |      |
-// | TAB  |     |     |     |     |     |   |     |  !  |  ?  |  `  |  \  |      |
-// | CTRL |     |     |     |     |     |   |  _  |  @  | "|" |     |     |      |
-//                  | GUI |    | SHFT |          | ENT |     | ALT |
-                        bindings = <
-   &kp ESC   &trans    &to 4  &trans    &trans &trans         &trans      &kp CARET &kp AMPS  &kp TILDE &trans    &trans
-   &kp TAB   &trans    &trans &trans    &trans &trans         &trans      &kp EXCL  &kp QMARK &kp GRAVE &kp BSLH  &trans
-   &kp LCTRL &trans    &trans &trans    &trans &trans         &kp UNDER   &kp AT    &kp PIPE  &trans    &trans    &trans
-           	     &kp LGUI    &trans   &kp LSHIFT                   &kp RET   &trans    &kp RALT
-                        >;
-                };
-                navigate_layer {
-                        label = "NAVIGATE";
-// -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |LDash|
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |Dash |
-// | CTRL |     |     |     |     |     |   | PREV| PLAY| NXT |     |     |RDash|
-//                  | GUI |     | SHFT |        | ENT |     | ALT |
-                        bindings = <
-   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6   &kp N7     &kp N8      &kp N9      &kp N0 &LDesk
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp LEFT &kp DOWN   &kp UP      &kp RIGHT   &trans &Dash
-   &kp LCTRL  &trans       &trans       &trans       &trans       &trans             &trans   &kp C_PREV &kp C_PP    &kp C_NEXT  &trans &RDesk
-                          	     &kp LGUI     &trans       &kp LSHIFT                    &kp RET  &trans   &kp RALT
-                        >;
-                };
-                OW2_layer {
-                        label = "OW2";
-// -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SSHOT|
-//                | GUI | DEL | SHFT |        | SPC | BKSP | ENT|
-                        bindings = <
-   &kp ESC     &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U    &kp I     &kp O     &kp P      &to 1
-   &kp TAB     &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J    &kp K     &kp L     &kp SEMI   &kp SQT
-   &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M    &kp COMMA &kp DOT   &kp FSLH   &Screen
-      &lt 1 LGUI  &lt 2 DEL &kp LSHFT                         &lt 3 SPACE &kp BSPC &kp RET
-                        >;
-                };
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
+            // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SSHOT|
+            //                | GUI | DEL | SHFT |        | SPC | BKSP | ENT|
+
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E       &kp R      &kp T        &kp Y        &kp U     &kp I      &kp O    &kp P     &trans
+&kp TAB    &kp A  &kp S  &kp D       &kp F      &kp G        &kp H        &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C       &kp V      &kp B        &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &Screen
+                         &lt 1 LGUI  &lt 2 DEL  &kp LSHFT    &lt 3 SPACE  &kp BSPC  &kp RET
+            >;
         };
+
+        NumPad {
+            label = "NUMBER";
+
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |  1  |  2  |  3  |  4  |  #  |    |  +  |  7  |  8  |  9  |  *  |     |
+            // | TAB  |     |  {  |  [  |  (  |  $  |    |  -  |  4  |  5  |  6  |  /  |     |
+            // | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |     |     |
+            //                | GUI | DEL |SHFT|            | 0  | BKSP| ALT |
+
+            bindings = <
+&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4    &kp HASH      &kp PLUS   &kp N7    &kp N8    &kp N9  &kp STAR  &trans
+&kp TAB    &trans  &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR      &kp MINUS  &kp N4    &kp N5    &kp N6  &kp FSLH  &trans
+&kp LCTRL  &trans  &kp RBRC  &kp RBKT  &kp RPAR  &kp PRCNT     &kp EQUAL  &kp N1    &kp N2    &kp N3  &trans    &trans
+                             &kp LGUI  &kp DEL   &kp LSHIFT    &kp N0     &kp BSPC  &kp RALT
+            >;
+        };
+
+        Symbols {
+            label = "SYMBOL";
+
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |     |     |     |     |     |   |     |  ^  |  &  |  ~  |     |      |
+            // | TAB  |     |     |     |     |     |   |     |  !  |  ?  |  `  |  \  |      |
+            // | CTRL |     |     |     |     |     |   |  _  |  @  | "|" |     |     |      |
+            //                  | GUI |    | SHFT |          | ENT |     | ALT |
+
+            bindings = <
+&kp ESC    &trans  &to 4   &trans    &trans  &trans        &trans     &kp CARET  &kp AMPS   &kp TILDE  &trans    &trans
+&kp TAB    &trans  &trans  &trans    &trans  &trans        &trans     &kp EXCL   &kp QMARK  &kp GRAVE  &kp BSLH  &trans
+&kp LCTRL  &trans  &trans  &trans    &trans  &trans        &kp UNDER  &kp AT     &kp PIPE   &trans     &trans    &trans
+                           &kp LGUI  &trans  &kp LSHIFT    &kp RET    &trans     &kp RALT
+            >;
+        };
+
+        navigate_layer {
+            label = "NAVIGATE";
+
+            // -----------------------------------------------------------------------------------------
+            // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |LDash|
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |Dash |
+            // | CTRL |     |     |     |     |     |   | PREV| PLAY| NXT |     |     |RDash|
+            //                  | GUI |     | SHFT |        | ENT |     | ALT |
+
+            bindings = <
+&kp ESC     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7      &kp N8    &kp N9      &kp N0  &LDesk
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT   &trans  &Dash
+&kp LCTRL   &trans        &trans        &trans        &trans        &trans          &trans    &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans  &RDesk
+                                        &kp LGUI      &trans        &kp LSHIFT      &kp RET   &trans      &kp RALT
+            >;
+        };
+
+        OW2_layer {
+            label = "OW2";
+
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
+            // | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SSHOT|
+            //                | GUI | DEL | SHFT |        | SPC | BKSP | ENT|
+
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E       &kp R      &kp T        &kp Y        &kp U     &kp I      &kp O    &kp P     &to 1
+&kp TAB    &kp A  &kp S  &kp D       &kp F      &kp G        &kp H        &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C       &kp V      &kp B        &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &Screen
+                         &lt 1 LGUI  &lt 2 DEL  &kp LSHFT    &lt 3 SPACE  &kp BSPC  &kp RET
+            >;
+        };
+    };
 };
