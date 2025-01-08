@@ -126,10 +126,10 @@
             //                  | GUI |    | SHFT |          | ENT |     | ALT |
 
             bindings = <
-&kp ESC    &trans  &to 4   &trans    &trans  &trans        &trans     &kp CARET  &kp AMPS   &kp TILDE  &trans    &trans
-&kp TAB    &trans  &trans  &trans    &trans  &trans        &trans     &kp EXCL   &kp QMARK  &kp GRAVE  &kp BSLH  &trans
-&kp LCTRL  &trans  &trans  &trans    &trans  &trans        &kp UNDER  &kp AT     &kp PIPE   &trans     &trans    &trans
-                           &kp LGUI  &trans  &kp LSHIFT    &kp RET    &trans     &kp RALT
+&kp ESC    &trans  &to 4   &trans    &trans  &trans        &trans          &kp CARET  &kp AMPS   &kp TILDE  &trans    &trans
+&kp TAB    &trans  &trans  &trans    &trans  &trans        &kp UNDERSCORE  &kp EXCL   &kp QMARK  &kp GRAVE  &kp BSLH  &trans
+&kp LCTRL  &trans  &trans  &trans    &trans  &trans        &trans          &kp AT     &kp PIPE   &trans     &trans    &trans
+                           &kp LGUI  &trans  &kp LSHIFT    &kp RET         &trans     &kp RALT
             >;
         };
 
