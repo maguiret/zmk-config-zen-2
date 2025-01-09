@@ -109,9 +109,9 @@
             //                | GUI | DEL |SHFT|            | 0  | BKSP| ALT |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4    &kp HASH      &kp PLUS   &kp N7    &kp N8     &kp N9  &kp STAR  &trans
-&kp TAB    &trans  &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR      &kp MINUS  &kp N4    &kp N5     &kp N6  &trans    &trans
-&kp LCTRL  &trans  &kp RBRC  &kp RBKT  &kp RPAR  &kp PRCNT     &kp EQUAL  &kp N1    &kp N2     &kp N3  &trans    &trans
+&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4    &kp HASH      &kp PLUS   &kp N7    &kp N8     &kp N9  &kp STAR   &trans
+&kp TAB    &trans  &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR      &kp MINUS  &kp N4    &kp N5     &kp N6  &kp SLASH  &trans
+&kp LCTRL  &trans  &kp RBRC  &kp RBKT  &kp RPAR  &kp PRCNT     &kp EQUAL  &kp N1    &kp N2     &kp N3  &trans     &trans
                              &kp LGUI  &kp DEL   &kp LSHIFT    &kp N0     &kp BSPC  &kp ENTER
             >;
         };
