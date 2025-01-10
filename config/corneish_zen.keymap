@@ -143,9 +143,9 @@
             //                  | GUI |     | SHFT |        | ENT |     | ALT |
 
             bindings = <
-&kp ESC     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp N9      &kp N0  &LDesk
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN           &kp UP           &kp RIGHT   &trans  &Dash
-&kp LCTRL   &trans        &trans        &trans        &trans        &trans          &trans    &kp C_PREV         &kp C_PP         &kp C_NEXT  &trans  &RDesk
+&kp ESC     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp N9      &kp N0  &LDesk
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN           &kp UP            &kp RIGHT   &trans  &Dash
+&kp LCTRL   &trans        &trans        &trans        &trans        &trans          &trans    &kp C_PREV         &kp K_PLAY_PAUSE  &kp C_NEXT  &trans  &RDesk
                                         &kp LGUI      &trans        &kp LSHIFT      &kp RET   &trans             &kp RALT
             >;
         };
