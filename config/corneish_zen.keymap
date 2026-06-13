@@ -104,14 +104,14 @@
 
             // -----------------------------------------------------------------------------------------
             // | ESC  |  1  |  2  |  3  |  4  |  #  |    |  +  |  7  |  8  |  9  |  *  |     |
-            // | TAB  |     |  {  |  [  |  (  |  $  |    |  -  |  4  |  5  |  6  |  /  |     |
-            // | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |     |     |
+            // | TAB  |     |  {  |  [  |  (  |  $  |    |  -  |  4  |  5  |  6  |     |     |
+            // | CTRL |     |  }  |  ]  |  )  |  %  |    |  =  |  1  |  2  |  3  |  /  |     |
             //                | GUI | DEL |SHFT|            | 0  | BKSP| ALT |
 
             bindings = <
 &kp ESC    &kp N1            &kp N2    &kp N3    &kp N4    &kp HASH      &kp PLUS   &kp N7    &kp N8     &kp N9  &kp STAR   &trans
-&kp TAB    &kp LESS_THAN     &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR      &kp MINUS  &kp N4    &kp N5     &kp N6  &kp SLASH  &trans
-&kp LCTRL  &kp GREATER_THAN  &kp RBRC  &kp RBKT  &kp RPAR  &kp PRCNT     &kp EQUAL  &kp N1    &kp N2     &kp N3  &trans     &trans
+&kp TAB    &kp LESS_THAN     &kp LBRC  &kp LBKT  &kp LPAR  &kp DLLR      &kp MINUS  &kp N4    &kp N5     &kp N6  &trans     &trans
+&kp LCTRL  &kp GREATER_THAN  &kp RBRC  &kp RBKT  &kp RPAR  &kp PRCNT     &kp EQUAL  &kp N1    &kp N2     &kp N3  &kp SLASH  &trans
                                        &kp LGUI  &kp DEL   &kp LSHIFT    &kp N0     &kp BSPC  &kp ENTER
             >;
         };
@@ -121,14 +121,14 @@
 
             // -----------------------------------------------------------------------------------------
             // | ESC  |     |     |     |     |     |   |     |  ^  | "|" |  ~  |     |      |
-            // | TAB  |     |     |     |     |     |   |     |  ?  |  !  |  `  |  \  |      |
-            // | CTRL |     |     |     |     |     |   |  _  |  @  |  &  |     |     |      |
+            // | TAB  |     |     |     |     |     |   |     |  ?  |  !  |  `  |     |      |
+            // | CTRL |     |     |     |     |     |   |  _  |  @  |  &  |     |  \  |      |
             //                  | GUI |    | SHFT |          | ENT |     | ALT |
 
             bindings = <
 &kp ESC    &trans  &to 0   &trans    &trans  &trans        &trans          &kp CARET  &kp PIPE   &kp TILDE  &trans    &trans
-&kp TAB    &trans  &trans  &trans    &trans  &trans        &kp UNDERSCORE  &kp QMARK  &kp EXCL   &kp GRAVE  &kp BSLH  &trans
-&kp LCTRL  &trans  &trans  &trans    &trans  &trans        &trans          &kp AT     &kp AMPS   &trans     &trans    &trans
+&kp TAB    &trans  &trans  &trans    &trans  &trans        &kp UNDERSCORE  &kp QMARK  &kp EXCL   &kp GRAVE  &trans    &trans
+&kp LCTRL  &trans  &trans  &trans    &trans  &trans        &trans          &kp AT     &kp AMPS   &trans     &kp BSLH  &trans
                            &kp LGUI  &trans  &kp LSHIFT    &kp RET         &trans     &kp RALT
             >;
         };
