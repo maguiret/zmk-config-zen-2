@@ -123,13 +123,13 @@
             // | ESC  |     |     |     |     |     |   |     |  ^  | "|" |  ~  |     |      |
             // | TAB  |     |     |     |     |     |   |     |  ?  |  !  |  `  |     |      |
             // | CTRL |     |     |     |     |     |   |  _  |  @  |  &  |     |  \  |      |
-            //                  | GUI |    | SHFT |          | ENT |     | ALT |
+            //                  | GUI |    | SHFT |          | ENT | DEL | ALT |
 
             bindings = <
 &kp ESC    &trans  &to 0   &trans    &trans  &trans        &trans          &kp CARET  &kp PIPE   &kp TILDE  &trans    &trans
 &kp TAB    &trans  &trans  &trans    &trans  &trans        &kp UNDERSCORE  &kp QMARK  &kp EXCL   &kp GRAVE  &trans    &trans
 &kp LCTRL  &trans  &trans  &trans    &trans  &trans        &trans          &kp AT     &kp AMPS   &trans     &kp BSLH  &trans
-                           &kp LGUI  &trans  &kp LSHIFT    &kp RET         &trans     &kp RALT
+                           &kp LGUI  &trans  &kp LSHIFT    &kp RET         &kp DEL    &kp RALT
             >;
         };
 
